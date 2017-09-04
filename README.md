@@ -17,33 +17,41 @@ changes over time.
 ## Files: ##
 
 ### tags.csv ###
-Sorted by motusTagID:
- - motusTagID  integer unique tag ID
+Sorted by tagID:
+ - tagID; integer unique motus tag ID
  - manufacturer
  - model
- - codeset
- - nomFreq nominal tag frequency, in MHz
- - mfgID
- - period repetition frequency, in seconds
+ - codeSet; for coded ID tags
+ - nomFreq; nominal tag frequency, in MHz
+ - mfgID; manufacturer ID (usually printed on tag)
+ - period; repetition frequency, in seconds
 
 ### tag_deployments.csv ###
-Sorted by motusTagID, tsStart:
- - motusTagID
- - motusProjectID
- - tsStart unix timestamp of tag deployment start
- - tsEnd unix timestamp of end of deployment
- - tsStartCode method for calculating start date
- - tsEndCode method for calculating end date
+Sorted by tagID, tsStart:
+ - tagID; integer unique motus tag ID
+ - projectID; integer unique motus project ID
+ - tsStart; unix timestamp of tag deployment start
+ - tsEnd; unix timestamp of end of deployment
+ - tsStartCode; method for calculating start date, the first of these which was possible:
+     1. `tsStart`, the starting date for a tag deployment record
+     2. `dateBin`, the start of the quarter year in which the tag was expected to be deployed
+     3. `ts`, the date the tag was registered
+ - tsEndCode; method for calculating end date, the first of these which was possible:
+     1. `tsEnd`, the ending date for a tag deployment; e.g. if a tag was found, or manually deactivated
+     2. `tsStart`, for a different deployment of the same tag
+     3. `tsStart + predictTagLifespan(model, BI) * marginOfError`, if the tag model is known
+     4. `tsStart + predictTagLifespan(guessTagModel(speciesID), BI) * marginOfError` , if the species is known
+     5. 90 days if no other information is available
 
 ### parameter_overrides.csv ###
-Sorted by motusProjectID, serno, tsStart
- - motusProjectID INTEGER
- - serno CHAR(32),                            -- serial number of device involved in this event (if any)
- - tsStart FLOAT(53),                         -- starting timestamp for this override (Lotek only)
- - tsEnd FLOAT(53),                           -- ending timestamp for this override (Lotek only)
- - monoBNhigh INT,                            -- ending boot session for this override (SG only)
- - monoBNlow INT,                             -- starting boot session for this override (SG only)
- - progName VARCHAR(16) NOT NULL,             -- identifier of program; e.g. 'find_tags'
- - paramName VARCHAR(16) NOT NULL,            -- name of parameter (e.g. 'minFreq')
- - paramVal FLOAT(53) NOT NULL,               -- value of parameter
- - why TEXT                                   -- human-readable reason for this override
+Sorted by projectID, serno, tsStart
+ - projectID; integer unique motus project ID
+ - serno; serial number of device involved in this event (if any)
+ - tsStart; starting timestamp for this override (Lotek only)
+ - tsEnd; ending timestamp for this override (Lotek only)
+ - monoBNhigh; ending boot session for this override (SG only)
+ - monoBNlow; starting boot session for this override (SG only)
+ - progName; identifier of program; e.g. 'find_tags'
+ - paramName; name of parameter (e.g. 'minFreq')
+ - paramVal; value of parameter
+ - why TEXT; human-readable reason for this override
