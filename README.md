@@ -55,3 +55,10 @@ Sorted by projectID, serno, tsStart
  - paramName; name of parameter (e.g. 'minFreq')
  - paramVal; value of parameter
  - why TEXT; human-readable reason for this override
+
+### receiver_deployments.csv ###
+Sorted by projectID, deviceID, tsStart
+ - projectID; integer motus project ID
+ - deviceID; integer motus device ID
+ - tsStart; double unix timestamp for start of deployment
+ - tsEnd; double unix timestamp for end of deployment (might be null)
