@@ -62,3 +62,4 @@ Sorted by projectID, deviceID, tsStart
  - deviceID; integer motus device ID
  - tsStart; double unix timestamp for start of deployment
  - tsEnd; double unix timestamp for end of deployment (might be null)
+
