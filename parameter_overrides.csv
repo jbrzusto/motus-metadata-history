@@ -5,6 +5,7 @@
 8,"SG-1013BB000626",NA,NA,19,20,"find_tags_motus","burst_slop",10,"higher time variance due to frequency switching?"
 8,"SG-1013BB000626",NA,NA,19,20,"find_tags_motus","max_dfreq",24,"higher time variance due to frequency switching?"
 8,"SG-1013BB000626",NA,NA,19,20,"find_tags_motus","pulse_slop",2.5,"higher time variance due to frequency switching?"
+76,NA,1438387200,1459837300,NA,NA,"find_tags_motus","default_freq",150.336,"project frequency for 2015 tags"
 76,NA,1459837300,1472110000,NA,NA,"find_tags_motus","default_freq",150.336,"project frequency for spring 2016 tags"
 76,NA,1472054000,NA,NA,NA,"find_tags_motus","default_freq",150.096,"project frequency for fall 2016 tags"
 113,NA,1483228800,NA,NA,NA,"find_tags_motus","default_freq",150.1,"project frequency for all 2017 tags"
