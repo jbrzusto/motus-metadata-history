@@ -25,6 +25,7 @@
 73,238,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
 71,241,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",151.496,"default project frequency"
 80,279,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
+82,283,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
 81,291,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
 6,NA,"SG-0613BB000613",NA,NA,19,20,"find_tags_motus","burst_slop",10,"higher time variance due to frequency switching?"
 7,NA,"SG-0613BB000613",NA,NA,19,20,"find_tags_motus","pulse_slop",2.5,"higher time variance due to frequency switching?"
