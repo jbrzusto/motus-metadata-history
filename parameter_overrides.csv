@@ -3,7 +3,6 @@
 1,76,NA,1459837300,1472110000,NA,NA,"find_tags_motus","default_freq",150.336,"project frequency for spring 2016 tags"
 2,76,NA,1472054000,NA,NA,NA,"find_tags_motus","default_freq",150.096,"project frequency for fall 2016 tags"
 36,113,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
-87,113,NA,NA,NA,NA,NA,"find_tags_motus","force_default_freq",NA,"test"
 5,114,NA,1451606400,NA,NA,NA,"find_tags_motus","default_freq",150.096,"project frequency for all 2016 tags"
 78,121,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
 12,123,NA,NA,NA,NA,NA,"find_tags_motus","default_freq",150.096,"default project frequency"
